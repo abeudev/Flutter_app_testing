@@ -16,7 +16,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.indigo,
+        //backgroundColor: Colors.indigo,
         title: Text("Flutter App Testing"),
         centerTitle: true,
         // actions: [
@@ -40,7 +40,7 @@ class _HomePageState extends State<HomePage> {
           IconButton(
               icon: Icon(Icons.arrow_right),
               onPressed: () {
-                Navigator.of(context).pushNamed(SecondPage.tag);
+                Navigator.of(context).pushNamed(SecondPage.tag,arguments: [numero]);
               })
         ],
       ),
@@ -53,7 +53,7 @@ class _HomePageState extends State<HomePage> {
           });
         },
         currentIndex: index,
-        backgroundColor: Colors.indigo,
+       // backgroundColor: Colors.indigo,
         items: [
           BottomNavigationBarItem(
             title: Text('Account'),
