@@ -45,8 +45,8 @@ class _HomePageState extends State<HomePage> {
                   Navigator.of(context).pushNamed(SecondPage.tag,arguments: [numero]);
                 },
                 ),
-                 Image.network(
-                "https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg"),
+                 Image.asset(
+                "images/dog.jpg"),
           ],
         ),
       ),
