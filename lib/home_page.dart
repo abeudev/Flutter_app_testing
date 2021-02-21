@@ -23,26 +23,32 @@ class _HomePageState extends State<HomePage> {
         //   Icon(Icons.account_circle),
         // ],
       ),
-      body: Column(
-        children: [
-          Image.network(
-              "https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg"),
-          IconButton(
-            icon: Icon(Icons.add_box),
-            onPressed: () {
-              print("Yoda");
-              setState(() {
-                numero = numero + 1;
-              });
-            },
-          ),
-          Text(numero.toString()),
-          IconButton(
-              icon: Icon(Icons.arrow_right),
+      body: SingleChildScrollView(
+              child: Column(
+          children: [
+            Image.network(
+                "https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg"),
+            IconButton(
+              icon: Icon(Icons.add_box),
               onPressed: () {
-                Navigator.of(context).pushNamed(SecondPage.tag,arguments: [numero]);
-              })
-        ],
+                print("Yoda");
+                setState(() {
+                  numero = numero + 1;
+                });
+              },
+            ),
+
+            Text(numero.toString()),
+            IconButton(
+                icon: Icon(Icons.arrow_right),
+                onPressed: () {
+                  Navigator.of(context).pushNamed(SecondPage.tag,arguments: [numero]);
+                },
+                ),
+                 Image.network(
+                "https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg"),
+          ],
+        ),
       ),
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: Colors.pink,
