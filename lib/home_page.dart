@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app_testing/second_page.dart';
+import 'second_page.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key key}) : super(key: key);
@@ -35,8 +37,11 @@ class _HomePageState extends State<HomePage> {
             },
           ),
           Text(numero.toString()),
-          IconButton(icon: Icon(Icons.arrow_right),
-          onPressed: (){})
+          IconButton(
+              icon: Icon(Icons.arrow_right),
+              onPressed: () {
+                Navigator.of(context).pushNamed(SecondPage.tag);
+              })
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'home_page.dart';
+import 'second_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -17,6 +18,7 @@ class _MyAppState extends State<MyApp> {
       home: HomePage(),
     
       debugShowCheckedModeBanner: false,
+      routes: {SecondPage.tag:(context)=>SecondPage()},
     );
   }
 }
